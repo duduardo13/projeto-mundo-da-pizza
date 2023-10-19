@@ -1,0 +1,74 @@
+
+
+body { background-color: white; }
+
+div#preloader {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 99999;
+
+}
+
+.loader {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top:-50px; 
+  margin-left:-50px;
+
+}
+
+/*Carregando*/
+.carregando{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent,
+                      transparent 40%, orange);
+  animation: carrega 2s linear infinite;
+}
+
+@keyframes carrega{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+} 
+
+
+.carregando::before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.carregando::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent,
+                      transparent 40%, orange);
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: -1;
+  filter: blur(30px);
+}
+

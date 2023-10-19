@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Roboto' , sans-serif;
+  src:  url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.perfil{
+  padding: 3%;
+}
+.boas-vindas{
+width: 65%;
+margin-left: auto;
+margin-right: auto;
+}
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 1,
+'wght' 600,
+'GRAD' 0,
+'opsz' 48;
+}
+#btn-conta1{
+   font-size: 50px !important;
+color: orange ;
+}
+.editar{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-decoration: none;
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.ver-mais{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.alterar{
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-style: none;
+  background-color: transparent;
+  margin-right: 3px;
+}
+
+
+.excluir{
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-style: none;
+  background-color: transparent;
+  margin-left: 3px;
+}
+
+
+
+.icone{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ola{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+}
+.link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.peca{
+  margin-left: 3px;
+  text-decoration: none;
+  color: orange;
+}
+.dados{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 15px 25px rgba(0,0,50,0.2);;
+}
+.defi{
+  background-color: orange;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+.conta{
+  margin-top: 5px;
+  margin-left: 5%;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+.linha{
+    padding: 0.2rem;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+  }
+[class^="col-"] {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .infos{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    margin: 20px;
+    width: 100%;
+  }
+.col-dados{
+  flex-direction:column;
+  justify-content: center;
+  margin-left: 10px
+}
+.nome, .cpf, .cel, .endereco{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #838383;
+  margin-bottom: 10px;
+}
+.cel{
+  margin-bottom: 20px;
+}

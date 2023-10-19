@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Roboto' , sans-serif;
+    src:  url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  }
+  
+
+
+.conteudo-modal-endereco{
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.btn-modal-endereco{
+    background-color: transparent;
+    color: orange;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 3px;
+    display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.btn-modal-endereco:hover{
+    color: rgb(222, 145, 2)
+}
+
+.modal-ende{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+   
+}
+
+.modal-endereco{
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 380px;
+    background-color: #eee;
+    padding: 0;
+    /*box-shadow: 0 0 2px white;*/
+    border-radius: 7px;
+}
+
+.modal-endereco-header, .modal-endereco-body, .modal-endereco-footer{
+    padding: 10px;
+}
+
+.modal-endereco-body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #838383;
+}
+
+.modal-endereco-body b{
+    font-style: bold;
+}
+
+
+.modal-endereco-header h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: orange;
+}

@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+ body {
+    background-color:#EEE;
+    font-family:'Lato', Helvetica, Arial;
+    font-size:15px;
+    display:flex;
+    margin:0;
+    padding: 0;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
+}
+
+.models {
+    display:none;
+}
+
+header {
+    z-index: 1112;
+    display:flex; /* none; */
+    justify-content: space-around !important; 
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: white;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 29%);
+   
+    /*margin-left: 1rem;  /*por que? */
+}
+
+/* Começo do Menu Responsivo */
+#login_form a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#login_form a:hover {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logo {
+    z-index: 1112;
+    width: 150px;
+    height: 150px;
+    margin-top: 55px;
+    position: absolute;
+    margin-right: 90%;
+}
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v68/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+
+main {
+    background-color: #fff;
+    background-size: cover;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 200, 'opsz' 48;
+  color: #ffaa3b; 
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+.itens-menu {
+    list-style: none;
+    display: flex;
+    position: absolute;
+}
+.itens-menu li {
+    letter-spacing: 3px;
+    margin-left: 30px;
+    font-size: 19px;
+    position:relative;
+    float:left;
+}
+.itens-menu a {
+    color: #ffaa3b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.itens-menu a:hover{
+    margin-bottom: 1px;
+    border-bottom: 1px solid #ffaa3b;
+    padding: 10px;
+}
+.itens-menu li ul{
+    z-index: 1111;
+    list-style:none;
+    position:absolute;
+    top:50px;
+    left:50%;
+    display:none;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.itens-menu li:hover ul, .itens-menu li.over ul{
+    display:block;
+    }
+
+
+.menu-responsivo {
+    display: none;
+    cursor: pointer;
+}
+.menu-responsivo div {
+    width: 32px;
+    height: 2px;
+    background: #ffaa3b;
+    margin: 8px;
+    transition: 0.5s;
+}
+@media (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+    .itens-menu {
+        position: absolute;
+        top: 8vh;
+        right: 0%;
+        width: 100%;
+        height: 70vh;
+        background: white ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+    .logo {
+        margin-left: 55%;
+    }
+    .itens-menu li {
+        margin-left: 0;
+        opacity: 0;
+        display: inline-block;
+    }
+    .itens-menu li img{
+        margin-left: 0;
+        display: inline-block;
+    }
+    .menu-responsivo {
+        display: block;
+    }
+}
+.itens-menu.ativar {
+    transform: translateX(0);
+}
+    @keyframes opacidadeLinks {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+            font-size: 15px;
+        }
+        to {
+            opacity: 1;
+            transform: trasnlateX(0);
+            font-size: 17px;
+        }
+    }
+.menu-responsivo.ativar .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.menu-responsivo.ativar .linha2 {
+    opacity: 0;
+}
+.menu-responsivo.ativar .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+/* Fim do Menu Responsivo */
+
+/* Formulário de Login */
+#login_form {
+    z-index: 1110;
+    margin-top: 398px;
+    margin-right: -25%;
+    padding: 0;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    transition: all ease-in-out .2s;
+    border-radius: 0px 0px 40px 40px;
+    top: -440px;
+    box-shadow: 0px 11px 10px 0px rgb(0 0 0 / 29%);
+}
+#login_form h1 {
+    margin-top: 0;
+    color: #ffaa3b;
+}
+#login_list {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    display: block;
+}
+#login_list .txt {
+    padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  height: 40px;
+  width: 60% ;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+}
+#login_list p{
+    margin-top: 10px;
+    font-size: 15px;
+    color:#ffaa3b;
+}
+#login_list .button {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #ffaa3b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#login_list .button:hover {
+    background: white;
+    color: #ffaa3b;
+    width: 185px;
+    height: 50px;
+    font-size: 25px;
+}
+#login_form a{
+    color:#ffaa3b;
+    font-size: 17px;
+    transform: 0.3s;
+}
+#login_form a:hover {
+    background: transparent;
+    font-size: 20px;
+}
+#check {
+    display: none;
+}
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+}
+label #btn {
+    right: 1pc;
+    top: 25%;
+    font-size: 20px;
+    color: #ffaa3b;
+    background-color: transparent;
+    padding: 6px 10px;
+    transition: 0.3s;  
+}
+label #btn:hover {
+    color: white;
+    background-color: #ffaa3b;
+}
+@media (max-width: 900px) {
+    label #btn {
+        top: 25%;
+    }
+}
+label #cancel {
+    z-index: 1111;
+    right: 1pc;
+    top: -60%;
+    font-size: 20px;
+    color: white;
+    background-color: #ffaa3b;
+    padding: 6px 10px;
+    transition: all .2s ease;
+}
+label #cancel:hover {
+    color: #ffaa3b;
+    background-color: white;
+}
+#check:checked ~ #login_form {
+    top: 15%;
+}
+@media (max-width: 900px) {
+    #check:checked ~ #login_form {
+        top: 80px;
+        right: 22%;
+        width: 110%;
+        border-radius: 0px 0px 0px 0px;
+    }
+        #login_form {
+        top: 80px;
+        right: 400%;
+        width: 100%
+    }
+    .logo {
+        margin-top: 7%;
+        margin-left: 55%;
+    }
+}
+#check:checked ~ #login_form .txt{
+    padding: 5px;
+    outline: none;
+    height: 40px;
+    width: 80% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid #ffaa3b;
+}
+  #check:checked ~ #login_form .txt:hover {
+    border-color: transparent;
+    border-bottom: 2px solid black;
+  }
+
+#check:checked ~ label #btn {
+    opacity: 0;
+    pointer-events: none;
+    top: 25%;
+}
+#check:checked ~ label #cancel {
+    top: 25%;   
+}
+
+/* Sub menu minha conta */
+
+#account_form a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#account_form {
+    z-index: 1110;
+    margin-top: 260px;
+    margin-right: -25%;
+    padding: 10px;
+    width: 220px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    transition: all ease-in-out .2s;
+    border-radius: 0px 0px 40px 40px;
+    top: -440px;
+    box-shadow: 0px 11px 10px 0px rgb(0 0 0 / 29%);
+}
+#account_form h1 .material-symbols-outlined {
+    margin-top: 0;
+    color: #ffaa3b;
+    font-size: 40px;
+}
+#account_list {
+    margin: 0;
+    padding-bottom: 20px;
+    list-style: none;
+    display: block;
+}
+
+#account_form li a{
+    color:#ffaa3b;
+    font-size: 22px;
+    transform: 0.3s;
+    padding-bottom: 60px;
+
+}
+
+#account_form li a:hover{
+    font-size: 25px;
+}
+#check {
+    display: none;
+}
+label #btn-conta, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+}
+label #btn-conta {
+    top: 12px;
+    right: 1pc;
+    font-size: 35px;
+    color: #ffaa3b;
+    background-color: transparent;
+    padding: 6px 10px;
+    transition: 0.3s;  
+}
+label #btn-conta:hover {
+    color: white;
+    background-color: #ffaa3b;
+}
+@media (max-width: 900px) {
+    label #btn-conta {
+        top: 25%;
+    }
+}
+label #cancel {
+    z-index: 1111;
+    right: 1pc;
+    top: -60%;
+    font-size: 20px;
+    color: white;
+    background-color: #ffaa3b;
+    padding: 6px 10px;
+    transition: all .2s ease;
+}
+label #cancel:hover {
+    color: #ffaa3b;
+    background-color: white;
+}
+#check:checked ~ #account_form {
+    top: 15%;
+}
+@media (max-width: 900px) {
+    #check:checked ~ #account_form {
+        top: 80px;
+        right: 22%;
+        width: 110%;
+        border-radius: 0px 0px 0px 0px;
+    }
+        #account_form {
+        top: 80px;
+        right: 400%;
+        width: 100%
+    }
+    .logo {
+        margin-top: 7%;
+        margin-left: 55%;
+    }
+}
+#check:checked ~ #account_form .txt{
+    padding: 5px;
+    outline: none;
+    height: 40px;
+    width: 80% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid #ffaa3b;
+}
+  #check:checked ~ #account_form .txt:hover {
+    border-color: transparent;
+    border-bottom: 2px solid black;
+  }
+
+#check:checked ~ label #btn-conta {
+    opacity: 0;
+    pointer-events: none;
+    top: 25%;
+}
+#check:checked ~ label #cancel {
+    top: 25%;   
+}
+
+
+.menu-openner {
+    margin-left: auto;
+    font-size: 26px;
+    padding: 0px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu-openner span {
+    margin-right:10px;
+}
+
+.menu-closer {
+    width:32px;
+    height:32px;
+    display:none;
+    font-size: 30px;
+}
+
+aside {
+    background-color:#fce7cc;
+    width:0vw;
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 29%);
+    font-family:'Hepta Slab', Helvetica, Arial;
+    transition:all ease .2s;
+    overflow-x:hidden;
+}
+
+aside.show {
+    width:30vw;
+}
+
+.cart--area {
+    margin-top: 60px; /* ajuste */
+    padding:20px;
+    width: 100%;
+}
+
+.cart--area h1 {
+    display: relative;
+    color: #ff952c
+}
+
+main {
+    flex:1;
+    padding:20px;
+    margin-top:60px;
+}
+
+h1, h2 {
+    font-family:'Hepta Slab', Helvetica, Arial;
+    text-align: center;
+}
+
+.pizza-area {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pizza-area-doce {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pizza-area-especial {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.pizza-item {
+    text-align: center;
+    max-width:250px;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    margin:0 auto 50px auto;
+}
+
+.pizza-item a {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-decoration: none;
+}
+
+.pizza-item--img {
+    width:200px;
+    height:200px;
+    background-color:#EEE;
+    border-radius:100px;
+    box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-item--img img {
+    width:100%;
+    height:auto;
+}
+
+.pizza-item--add {
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:25px;
+    background-color:#ffaa3b;
+    text-align:center;
+    color:#FFF;
+    font-size:22px;
+    cursor:pointer;
+    margin-top:-25px;
+    transition:all ease .2s;
+}
+
+.pizza-item a:hover .pizza-item--add {
+    background-color:#d58c2d;
+}
+
+.pizza-item--price {
+    font-size:15px;
+    color:#333;
+    margin-top:5px;
+}
+
+.pizza-item--name {
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+    margin-top:5px;
+}
+
+.pizza-item--desc {
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+}
+
+.pizzaWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+}
+
+.pizzaWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+
+.pizzaBig {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizzaBig--back {
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-color:#000;
+}
+
+.pizzaBig img {
+    height:400px;
+    width:auto;
+}
+
+.pizzaInfo {
+    flex:1;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    padding-bottom:50px;
+}
+
+.pizzaInfo h1 {
+    margin-top:50px;
+}
+
+.pizzaInfo .pizzaInfo--desc {
+    font-size:15px;
+    color:#999;
+    margin-top:10px;
+    font-family:'Lato',Helvetica,Arial;
+}
+
+.pizzaInfo--sector {
+    color:#CCC;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.pizzaInfo--price {
+    display:flex;
+    align-items:center;
+}
+
+.pizzaInfo--actualPrice {
+    font-size:28px;
+    margin-right:30px;
+}
+
+.pizzaInfo--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.pizzaInfo--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.pizzaInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+
+.pizzaInfo--addButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#48d05f;
+    color:#FFF;
+    display:inline-block;
+    cursor:pointer;
+    margin-right:30px;
+}
+
+.pizzaInfo--addButton:hover {
+    background-color:#32a345;
+}
+
+.pizzaInfo--cancelButton {
+    display:inline-block;
+    cursor:pointer;
+}
+
+.pizzaInfo--cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.cart {
+    margin-bottom:20px;
+}
+
+.cart--item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+
+.cart--item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+
+.cart--item-nome {
+    flex:1;
+    font-size: 18px;
+}
+
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.cart--item--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+
+.cart--totalitem {
+    padding:20px 0;
+    border-top:2px #ff952c dashed;
+    color: black;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+
+.cart--totalitem.big {
+    font-size:20px;
+    color:#000;
+    font-weight: bold;
+}
+
+.cart--finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#48d05f;
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid #63f77c;
+    transition: all ease .2s;
+}
+
+.cart--finalizar:hover {
+    background-color:#35af4a;
+}
+
+@media (max-width:1000px) {
+    .pizza-area, .pizza-area-doce, .pizza-area-especial {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:840px) {
+    body {
+        flex-direction: column;
+    }
+    .pizza-area, .pizza-area-doce, .pizza-area-especial {
+        display:block;
+    }
+    .pizza-item {
+        max-width:100%;
+    }
+    header {
+        display:flex;
+    }
+    /*
+    main {
+        padding-top:60px;
+    }
+    */
+    aside {
+        width:auto;
+        position:fixed;
+        left:100vw;
+        right:0;
+        top:0;
+        bottom:0;
+        transition: all ease .2s;
+    }
+    aside.show {
+        width:auto;
+    }
+    .cart--area {
+        width:100vw;
+    }
+
+    .menu-openner{
+        padding: 5px 70px;
+    }
+    .menu-closer {
+        display:block;
+    }
+
+    .pizzaWindowArea {
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .pizzaWindowBody {
+        width:100vw;
+        display:block;
+        padding:20px;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+        margin-top: 50%;
+    }
+
+    .pizzaBig img {
+        width: 75%;
+        height: auto;
+    }
+
+    .pizzaInfo h1 {
+        margin-top:20px;
+    }
+
+    .pizzaInfo--qtarea {
+        height:60px;
+    }
+    
+    .pizzaInfo--qtarea button {
+        font-size:25px;
+        padding:0px 25px;
+    }
+
+    .pizzaInfo--qt {
+        line-height: 60px;
+        font-size:20px;
+    }
+
+    .pizzaInfo--addButton {
+        font-size:20px;
+        display:block;
+        text-align:center;
+        margin:30px auto;
+    }
+
+    .pizzaInfo--cancelButton {
+        display:none;
+    }
+
+    .pizzaInfo--cancelMobileButton {
+        display:block;
+    }
+
+}
+
+@media (max-width:450px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .menu-openner {
+        font-size: 1.5rem;
+        
+    }
+}
+
+@media (max-width:380px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    .menu-openner {
+        font-size: 1.5rem;
+       
+    }
+}
+
+#img-logo {
+    width: 50px;
+}

@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    position:relative;
+    overflow-x:hidden;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu-lateral{
+    overflow-y: hidden;
+}
+.navegacao{
+    position: fixed;
+    height: 100%;
+    background: #ad6200;
+    width: 70px;
+    box-shadow: 8px 0 0 #ffaa3b;
+    border-left: 10px solid #ad6200;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.navegacao:hover{
+    width: 300px;
+}
+.navegacao ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.navegacao ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navegacao ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+.navegacao ul li a .icone{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+.navegacao ul li a .icone ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+.navegacao ul li a .titulo{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.navegacao ul li.ativo{
+    background: #ffaa3b;
+}
+.navegacao ul li.ativo a::before{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #ad6200;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #ffaa3b;
+}
+.navegacao ul li.ativo a::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #ad6200;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #ffaa3b;
+}
+.container{
+    float:right;
+    width: 94%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Roboto' , sans-serif;
+    src:  url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  .perfil{
+      padding: 3%;
+  }
+  .boas-vindas{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48;
+  }
+  #btn-conta1{
+       font-size: 50px !important;
+    color: orange ;
+  }
+  .editar{
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      text-decoration: none;
+      color: orange;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      margin-right: 10px;
+      margin-top: 10px;
+  }
+  .alterar{
+      text-decoration: none;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      margin-right: 3px;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      background-color:#ffaa3b;
+      border-radius: 20px;
+      padding: 5px;
+      padding-left: 18px;
+      padding-right: 18px;
+  }
+  .alterar ion-icon{
+    min-width: 20px;
+    height: 20px;
+    line-height:30px;
+  }
+  .excluir{
+      text-decoration: none;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      margin-left: 3px;
+      margin-bottom: 20px;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer; 
+      background-color:#ffaa3b;
+      border-radius: 20px;
+      padding: 5px;
+      padding-left: 18px;
+      padding-right: 18px;
+  }
+  .excluir ion-icon{
+    min-width: 20px;
+    height: 20px;
+    line-height:30px;
+  }
+  .icone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .ola{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  .peca{
+    margin-left: 3px;
+    text-decoration: none;
+    color: orange;
+  }
+  .dados{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 15px 25px rgba(0,0,50,0.2);;
+  }
+  .defi{
+    background-color: orange;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+  }
+  .conta{
+    margin-top: 5px;
+    margin-left: 5%;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+  }
+  .linha{
+      padding: 0.2rem;
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+    }
+  [class^="col-"] {
+      box-sizing: border-box;
+      padding: 0.5rem;
+      width: 100%;
+    }
+    .infos{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 24px;
+      margin: 20px;
+      width: 100%;
+    }
+  .col-dados{
+    flex-direction:column;
+    justify-content: center;
+    margin-left: 10px
+  }
+  .nome, .cpf, .cel, .endereco{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #838383;
+    margin-bottom: 10px;
+  }
+  .cel{
+    margin-bottom: 20px;
+  }
+  .btn-entregue button{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 3px;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer; 
+    background-color:#ffaa3b;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .btn-entregue ion-icon{
+    min-width: 20px;
+    height: 20px;
+  }
+
+
+
+
+  .bem-vindo{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #btn-conta2{
+    font-size: 70px !important;
+    color: orange ;
+  }
+.icone-home-func{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .oi{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+  }

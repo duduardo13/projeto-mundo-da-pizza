@@ -1,0 +1,379 @@
+/*Inicio do cadastro*/
+@font-face {
+    font-family: 'Roboto' , sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  }
+  *{
+  box-sizing: border-box;
+  
+  }
+  .container{
+  margin: auto;
+  }
+  .form {
+    margin: auto;
+  }
+  .logoPizza.finalizar{
+  width: 150px;
+  height: 150px;
+  }
+  .linha {
+    padding: 0.2rem;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+  }
+
+  .pedido-item {
+    padding: 0.2rem;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+  }
+
+  .linha-2{
+    padding: 0.2rem;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+  }
+  [class^="col-"] {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin-left : auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .col-finalizar{
+    width: 55%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+
+  .col-pagamento{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .col-valortotal{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .col-pedido{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .col-total{
+    width: 25%;
+  }
+
+  .col-produto{
+    width: 58%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .col-preco{
+    width: 17%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .col-quantidade{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .col-id{
+      display: none;
+  }
+
+  .col-logoPizza{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .col-enviar {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .col-voltar {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+.endereco{
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    height: 40px;
+    width: 100% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.endereco:hover{
+    border-color: transparent;
+    border: 1px solid #ff952c;
+    cursor: pointer;
+}
+
+#detalhesdacompra{
+    display: none;
+   
+}
+
+#metodopagid{
+    display: none;
+}
+
+#metodopagid2{
+    display: none;
+}
+
+#metodopagid3{
+  display: none;
+}
+
+#debito{
+    display: none;
+}
+
+#credito{
+    display: none;
+}
+
+.metodopag{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.metodopag1{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.metodopag1::before{
+    content: '';
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.metodopag::before{
+    content: '';
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#metodopagid:checked + .metodopag::before{
+    background-color: #ff952c;
+}
+
+#metodopagid2:checked + .metodopag::before{
+    background-color: #ff952c
+}
+#metodopagid3:checked + .metodopag::before{
+  background-color: #ff952c
+}
+
+#debito:checked + .metodopag1::before{
+    background-color: #ff952c
+}
+
+#credito:checked + .metodopag1::before{
+    background-color: #ff952c
+}
+
+.tipocartao{
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    height: 40px;
+    width: 100% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.tipocartao:hover{
+    border-color: transparent;
+    border: 1px solid #ff952c;
+    cursor: pointer;
+}
+
+
+label.metodopag1{
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+  .fieldset{
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+  }
+
+  .form-control {
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    height: 40px;
+    width: 100% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .pro-form{
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    height: 40px;
+    width: 100% ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    border-style: none
+    }
+
+  .total-form{
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    height: 40px;
+    width: 100% ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    border-style: none
+  }
+
+    .form-control:hover {
+    border-color: transparent;
+    border-bottom: 2px solid #ff952c;
+    }
+  .form-control:focus,.form-control:active {
+    border-color: transparent;
+    border-bottom: 2px solid #ff952c;
+  }
+    .btn.btn-primary{
+      background-color: #ff952c;
+      color: rgb(242, 242, 242);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      border-style: none;
+      border-radius: 4px;
+      height: 40px;
+      width: 120px;
+      cursor: pointer;
+    }
+    .btn.btn-second{
+      color:#ff952c;
+      background-color: transparent;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      border-style: none;
+      border-radius: 4px;
+      height: 40px;
+      cursor: pointer;
+    }
+    .btn.btn-primary:hover{
+      background-color: #d98026;
+      box-shadow: 0px 4px 7px 0px rgba(160,160,160,0.25);
+    }
+    .btn.btn-second:hover{
+      border-radius: 0%;
+      border-bottom: 3px solid #d98026;
+    }
+  @media (max-width: 620px) {
+    .fieldset{
+      width: auto;
+      border-color: transparent;
+    }
+    .col-logoPizza{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .col-finalizar, .col-pagamento{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+      .linha-2{
+        flex-wrap: wrap-reverse;
+      }
+      .linha {
+        flex-wrap: wrap;
+        
+      }
+      .row,
+      .col-finalizar,
+      .col-logoPizza{
+        width: 100%;
+      }
+
+      .col-valortotal, .col-total{
+        width: 50%;
+      }
+
+    }
+  /*Fim do Formulário de Cadastro*/

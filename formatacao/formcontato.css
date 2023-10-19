@@ -1,0 +1,275 @@
+/*Inicio do cadastro*/
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+}
+*{
+box-sizing: border-box;
+
+}
+.container{
+margin: auto;
+}
+.form {
+  margin: auto;
+}
+.logoPizza.cadastro{
+width: 150px;
+height: 150px;
+}
+.linha {
+  padding: 0.2rem;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+}
+.linha-2{
+  padding: 0.2rem;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+}
+[class^="col-"] {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-left : auto;
+  margin-right: auto;
+  width: 100%;
+}
+.col-suporte{
+  width: 55%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-logoPizza{
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.col-enviar {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.col-voltar {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fieldset{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-style: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 15px 25px rgba(0,0,50,0.2);
+}
+.form-control {
+  padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  height: 40px;
+  width: 100% ;
+  font-family: 'Roboto', sans-serif;
+  border-style: solid;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0,0,50,0.2);
+}
+  .form-control:hover {
+  border-color: transparent;
+  border-bottom: 2px solid #ff952c;
+  }
+.form-control:focus,.form-control:active {
+  border-color: transparent;
+  border-bottom: 2px solid #ff952c;
+}
+  .btn.btn-primary{
+    background-color: #ff952c;
+    color: rgb(242, 242, 242);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+  }
+  .btn.btn-second{
+    color:#ff952c;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+  }
+  .btn.btn-primary:hover{
+    background-color: #d98026;
+    box-shadow: 0px 4px 7px 0px rgba(160,160,160,0.25);
+  }
+  .btn.btn-second:hover{
+    border-radius: 0%;
+    border-bottom: 3px solid #d98026;
+  }
+
+    .col-text{
+      width: 100%;
+    }
+  .formText{
+    padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  height: 150px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  resize: none;
+}
+  .formText:hover {
+  border-color: transparent;
+  border: 1px solid #ff952c;
+  }
+.formText:focus,.formText:active {
+  border-color: transparent;
+  border: 1px solid #ff952c;
+}
+  .btn.btn-primary{
+    background-color: #ff952c;
+    color: rgb(242, 242, 242);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+  }
+  .btn.btn-second{
+    color:#ff952c;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+  }
+  .btn.btn-primary:hover{
+    background-color: #d98026;
+    box-shadow: 0px 4px 7px 0px rgba(160,160,160,0.25);
+  }
+  .btn.btn-second:hover{
+    border-radius: 0%;
+    border-bottom: 3px solid #d98026;
+  }
+
+@media (max-width: 620px) {
+  .fieldset{
+    width: auto;
+    border-color: transparent;
+  }
+  .col-logoPizza{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .col-suporte{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+    .linha-2{
+      flex-wrap: wrap-reverse;
+    }
+    .linha {
+      flex-wrap: wrap;
+      
+    }
+    .row, 
+    .col-email,
+    .col-nome,
+    .col-suporte,
+    .col-logoPizza,
+    .col-text{
+      width: 100%;
+    }
+  }
+/*Fim do Formulário de Cadastro*/
+
+
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}

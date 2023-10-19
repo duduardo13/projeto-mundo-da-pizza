@@ -1,0 +1,1085 @@
+:root{
+	--textocinzaclaro:#4e4e4e ;
+	--textocinzaescuro:#434343 ;
+	--corfooter:#33383b ;
+	--laranjapizzaria:#ffaa3b ;
+	--laranjapizzariahover:#d58c2d ;
+	--areacarrinho:#ffb759 ;
+    --preco:#333;
+	--desconto:#555 ;
+	--areapizza:rgba(255, 255, 255, 0.5) ;
+	--sombrapizza:#999 ;
+	--add:#48d05f ;	
+	--addhover:#32a345 ;
+	--addborda:#63f77c ;
+    --corfundo: rgb(242, 242, 242)
+	
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.home, body {
+    position:relative;
+    overflow-x:hidden;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Começo do Menu Responsivo */
+#login_form a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#login_form a:hover {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logo {
+    z-index: 1112;
+    width: 150px;
+    height: 150px;
+    margin-top: 55px;
+    position: absolute;
+    margin-right: 90%;
+}
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v68/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+
+header{
+    z-index: 1112;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: white;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 29%);
+}
+
+main {
+    background-color: #fff;
+    background-size: cover;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 200, 'opsz' 48;
+  color: #ffaa3b; 
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+.itens-menu {
+    list-style: none;
+    display: flex;
+    position: absolute;
+}
+.itens-menu li {
+    letter-spacing: 3px;
+    margin-left: 30px;
+    font-size: 19px;
+    position:relative;
+    float:left;
+}
+.itens-menu a {
+    color: #ffaa3b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.itens-menu a:hover{
+    margin-bottom: 1px;
+    border-bottom: 1px solid #ffaa3b;
+    padding: 10px;
+}
+.itens-menu li ul{
+    z-index: 1111;
+    list-style:none;
+    position:absolute;
+    top:50px;
+    left:50%;
+    display:none;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.itens-menu li:hover ul, .itens-menu li.over ul{
+    display:block;
+    }
+
+
+.menu-responsivo {
+    display: none;
+    cursor: pointer;
+}
+.menu-responsivo div {
+    width: 32px;
+    height: 2px;
+    background: #ffaa3b;
+    margin: 8px;
+    transition: 0.5s;
+}
+@media (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+    .itens-menu {
+        position: absolute;
+        top: 8vh;
+        right: 0%;
+        width: 100%;
+        height: 100vh;
+        background: white ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+    .logo {
+        margin-left: 55%;
+    }
+    .itens-menu li {
+        margin-left: 0;
+        opacity: 0;
+        display: inline-block;
+        
+    }
+    .itens-menu li img{
+        margin-left: 0;
+        display: inline-block;
+    }
+    .menu-responsivo {
+        display: block;
+    }
+}
+.itens-menu.ativar {
+    transform: translateX(0);
+}
+    @keyframes opacidadeLinks {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+            font-size: 25px;
+        }
+        to {
+            opacity: 1;
+            transform: trasnlateX(0);
+            font-size: 27px;
+        }
+    }
+.menu-responsivo.ativar .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.menu-responsivo.ativar .linha2 {
+    opacity: 0;
+}
+.menu-responsivo.ativar .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+/* Fim do Menu Responsivo */
+
+/* Formulário de Login */
+#login_form {
+    z-index: 1110;
+    margin-top: 398px;
+    margin-right: -25%;
+    padding: 0;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    transition: all ease-in-out .2s;
+    border-radius: 0px 0px 40px 40px;
+    top: -440px;
+    box-shadow: 0px 11px 10px 0px rgb(0 0 0 / 29%);
+}
+#login_form h1 {
+    margin-top: 0;
+    color: #ffaa3b;
+}
+#login_list {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    display: block;
+}
+#login_list .txt {
+    padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  height: 40px;
+  width: 60% ;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+}
+#login_list p{
+    margin-top: 10px;
+    font-size: 15px;
+    color:#ffaa3b;
+}
+#login_list .button {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #ffaa3b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#login_list .button:hover {
+    background: white;
+    color: #ffaa3b;
+    width: 185px;
+    height: 50px;
+    font-size: 25px;
+}
+#login_form a{
+    color:#ffaa3b;
+    font-size: 17px;
+    transform: 0.3s;
+}
+#login_form a:hover {
+    background: transparent;
+    font-size: 20px;
+}
+#check {
+    display: none;
+}
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+}
+label #btn {
+    right: 1pc;
+    top: 25%;
+    font-size: 20px;
+    color: #ffaa3b;
+    background-color: transparent;
+    padding: 6px 10px;
+    transition: 0.3s;  
+}
+label #btn:hover {
+    color: white;
+    background-color: #ffaa3b;
+}
+@media (max-width: 900px) {
+    label #btn {
+        top: 25%;
+    }
+}
+label #cancel {
+    z-index: 1111;
+    right: 1pc;
+    top: -60%;
+    font-size: 20px;
+    color: white;
+    background-color: #ffaa3b;
+    padding: 6px 10px;
+    transition: all .2s ease;
+}
+label #cancel:hover {
+    color: #ffaa3b;
+    background-color: white;
+}
+#check:checked ~ #login_form {
+    top: 15%;
+}
+@media (max-width: 900px) {
+    #check:checked ~ #login_form {
+        top: 80px;
+        right: 22%;
+        width: 110%;
+        border-radius: 0px 0px 0px 0px;
+    }
+        #login_form {
+        top: 80px;
+        right: 400%;
+        width: 100%
+    }
+    .logo {
+        margin-top: 7%;
+        margin-left: 55%;
+    }
+}
+#check:checked ~ #login_form .txt{
+    padding: 5px;
+    outline: none;
+    height: 40px;
+    width: 80% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid #ffaa3b;
+}
+  #check:checked ~ #login_form .txt:hover {
+    border-color: transparent;
+    border-bottom: 2px solid black;
+  }
+
+#check:checked ~ label #btn {
+    opacity: 0;
+    pointer-events: none;
+    top: 25%;
+}
+#check:checked ~ label #cancel {
+    top: 25%;   
+}
+
+/* Sub menu minha conta */
+
+#account_form a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#account_form {
+    z-index: 1110;
+    margin-top: 300px;
+    margin-right: -25%;
+    padding: 10px;
+    width: 220px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    transition: all ease-in-out .2s;
+    border-radius: 0px 0px 40px 40px;
+    top: -440px;
+    box-shadow: 0px 11px 10px 0px rgb(0 0 0 / 29%);
+}
+#account_form h1 .material-symbols-outlined {
+    margin-top: 0;
+    color: #ffaa3b;
+    font-size: 40px;
+}
+#account_list {
+    margin: 0;
+    padding-bottom: 10px;
+    list-style: none;
+    display: block;
+}
+
+#account_form li {
+    margin-bottom: 15px;
+}
+
+#account_form li a{
+    color:#ffaa3b;
+    font-size: 22px;
+
+    transform: 0.3s;
+}
+
+#account_form li a:hover{
+    font-size: 25px;
+}
+#check {
+    display: none;
+}
+label #btn-conta, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+}
+label #btn-conta {
+    top: 12px;
+    right: 1pc;
+    font-size: 35px;
+    color: #ffaa3b;
+    background-color: transparent;
+    padding: 6px 10px;
+    transition: 0.3s;  
+}
+label #btn-conta:hover {
+    color: white;
+    background-color: #ffaa3b;
+}
+@media (max-width: 900px) {
+    label #btn-conta {
+        top: 25%;
+    }
+}
+label #cancel {
+    z-index: 1111;
+    right: 1pc;
+    top: -60%;
+    font-size: 20px;
+    color: white;
+    background-color: #ffaa3b;
+    padding: 6px 10px;
+    transition: all .2s ease;
+}
+label #cancel:hover {
+    color: #ffaa3b;
+    background-color: white;
+}
+#check:checked ~ #account_form {
+    top: 15%;
+}
+@media (max-width: 900px) {
+    #check:checked ~ #account_form {
+        top: 80%;
+        right: 22%;
+        width: 110%;
+        border-radius: 0px 0px 0px 0px;
+    }
+        #account_form {
+        top: 80%;
+        right: 400%;
+        width: 100%
+    }
+        #account_list li a {
+        font-size: 30px;
+        }
+    .logo {
+        margin-top: 7%;
+        margin-left: 55%;
+    }
+}
+#check:checked ~ #account_form .txt{
+    padding: 5px;
+    outline: none;
+    height: 40px;
+    width: 80% ;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid #ffaa3b;
+}
+  #check:checked ~ #account_form .txt:hover {
+    border-color: transparent;
+    border-bottom: 2px solid black;
+  }
+
+#check:checked ~ label #btn-conta {
+    opacity: 0;
+    pointer-events: none;
+    top: 25%;
+}
+#check:checked ~ label #cancel {
+    top: 25%;   
+}
+
+
+/*Começo do Carrossel*/
+.galeria {
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--corfundo);
+}
+.galeria .imagens {
+    width: 500%;
+    animation-name: animacao;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+.galeria .imagens img {
+    width: 20%;
+}
+@keyframes animacao{
+    0%{
+        margin-left: 0%;
+    }
+
+    5%{
+        margin-left: 0%;    
+    }
+
+    10%{
+        margin-left: -100%;
+    }
+
+    15%{
+        margin-left: -100%;
+    }
+
+
+    20% {
+        margin-left:-200%;
+   }
+
+   25%{
+        margin-left:-200%;
+   }
+   
+    30% {
+        margin-left: 0%;
+
+   }
+
+   35%{
+        margin-left: 0%;
+    
+   }
+
+   40% {
+       margin-left: -100%;
+
+   }
+
+   45%{
+        margin-left: -100%;
+
+   }
+
+   50% {
+        margin-left: -200%;
+   }
+
+   55%{
+    margin-left: -200%;
+
+   }
+
+
+   60% {
+       margin-left: 0%;
+   }
+
+   65%{
+        margin-left: 0%;
+   }
+
+
+   70% {
+       margin-left: -100%;
+   }
+
+   75%{
+        margin-left: -100%;
+   }
+
+
+    80% {
+       margin-left:-200%;
+   }
+
+   85%{
+    margin-left: -200%;
+   }
+
+
+   90% {
+       margin-left: 0%; 
+   } 
+
+   95%{
+        margin-left: 0%;
+   }
+
+   100% {
+        margin-left: 0%;
+   }
+}
+@media (max-width:999px) {
+    .galeria {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+}
+/*Fim do Carrossel*/
+
+/*como chegar*/
+.localizacao{
+    padding: 3%;
+    background-color:var(--corfundo) ;
+}
+
+.localizacao .titulo-localizacao{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: var(--laranjapizzaria)
+}
+
+.mapa{
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.mapa iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+
+/*.promocoes*/
+.promocoes{
+    padding: 3%;
+    background-color: white;
+}
+
+.linha-promocoes h1 {
+    text-align: center;
+    font-size: 20px;
+    font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container-promo .texto-promocoes{
+    text-align: center;
+    font-size: 35px;
+    font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.coluna-promocao1{
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .coluna-promocao2{
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+  .coluna-promocao3{
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+/* Quem somos */
+
+.quemsomos{
+    padding: 3%;
+    background-color: var(--corfundo);
+}
+
+.container-qs .texto-quemsomos{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.estabelecimento{
+    width: 100%;
+}
+
+.linha-quemsomos {
+    padding: 0.2rem;
+    display: flex;
+    width: 100%;
+  }
+[class^="colun-"] {
+    box-sizing: border-box;
+    padding: 3rem;
+    width: 100%;
+  }
+  .colun-quem{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .colun-quem .quem{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+  .colun-quem .somos{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+  .colun-somos{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    transition: transform 0.4s ease-in;
+  }
+  .colun-somos img{
+      width: 500px;
+  }
+
+
+ /*------------------------MVV--------------------------*/
+ .linha-mvv{
+    padding: 2.0rem;
+    box-sizing: border-box,;
+    display: flex;
+    width: 100%;
+  }
+
+  [class^="cou-"]{
+    box-sizing: border-box;
+    padding: 0.5rem 2.5rem;
+    width: 100%;
+  }
+  .cou-missao{
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+
+}
+.cou-visao{
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.cou-valores{
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+ [class^="t-"]{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color:var(--laranjapizzaria)
+ }
+
+ [class^="c-"]{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #434343
+ }
+ /*------------------------MVV--------------------------*/
+
+
+@media (max-width: 1200px) {    
+    [class^="colun-"] {
+        
+        padding: 0.5rem;
+       
+      }
+    
+    .colun-quem{
+        padding: 0rem 2rem 0rem 2rem;
+    }
+
+    .colun-somos{
+        padding: 1rem 0rem 0rem 0rem;
+    }
+    .linha-quemsomos {
+      flex-wrap: wrap-reverse;
+    }
+    .linha-quemsomos,
+    .colun-quem,
+    .colun-somos{
+      width: 100%;
+      justify-content: center;
+    }
+    .colun-quem .quem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    }
+
+    .colun-quem .somos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 20px;
+        }
+
+  .colun-somos img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    }
+}
+
+/*------------------------MVV-----------------------------------*/
+@media(max-width: 840px){
+    .linha-mvv{
+        flex-wrap: wrap;
+    }
+
+.linha-mvv,
+.cou-missao,
+.cou-visao,
+.cou-valores{
+    width: 100%;
+}
+
+.cou-missao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+.cou-visao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;  
+
+}
+
+.cou-valores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%; 
+}
+}
+
+
+/*------------------------MVV-----------------------------------*/
+        
+/* Começo do Rodapé */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+.footer-distributed{
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+    font-size: 30px;
+}
+
+.footer-distributed h3 span{
+	color:  #ffaa3b;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #ffaa3b;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #ffaa3b;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 4px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+.whatsapp{
+height: 35px;
+width: 43px;
+padding-right: 4px;
+padding-left: 4px;     
+}
+
+.instagram{
+height: 35px;
+width: 43px; 
+padding-left: 4px;
+padding-right: 4px;   
+}
+/* Fim do Rodapé */
+
+.destaque{
+    color: #ffaa3b;
+}
